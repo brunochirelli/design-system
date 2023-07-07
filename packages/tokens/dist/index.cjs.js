@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});function r(t){let e=0;const o=n=>{e=n,t.innerHTML=`count is ${e}`};t.addEventListener("click",()=>o(e+1)),o(0)}const u=t=>console.log(t);exports.log=u;exports.setupCounter=r;

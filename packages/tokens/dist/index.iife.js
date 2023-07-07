@@ -1,1 +1,0 @@
-(function(n){"use strict";function u(t){let e=0;const o=c=>{e=c,t.innerHTML=`count is ${e}`};t.addEventListener("click",()=>o(e+1)),o(0)}const s=t=>console.log(t);n.log=s,n.setupCounter=u,Object.defineProperty(n,Symbol.toStringTag,{value:"Module"})})(this.tokens=this.tokens||{});
