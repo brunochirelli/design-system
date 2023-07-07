@@ -1,52 +1,12 @@
-const m = {
-  Colors: {
-    "primary-100": "red",
-    "primary-200": "red",
-    "primary-300": "red",
-    "primary-400": "red",
-    "primary-500": "red"
-  },
-  Spacings: {
-    xs: "0.5rem",
-    sm: "1rem",
-    md: "1.5rem",
-    lg: "2rem"
-  }
-}, c = {
-  Colors: {
-    "primary-100": "red",
-    "primary-200": "red",
-    "primary-300": "red",
-    "primary-400": "red",
-    "primary-500": "red"
-  },
-  Spacings: {
-    xs: "0.5rem",
-    sm: "1rem",
-    md: "1.5rem",
-    lg: "2rem"
-  }
-}, a = (e) => ({
-  light: c,
-  dark: m,
-  ...e
-}), i = (e = "light", n) => ({ ...a()[e], ...n }), l = (e, n = "") => {
-  const r = {}, s = n.toLowerCase();
-  for (const t in e)
-    if (typeof e[t] == "object" && e[t] !== null)
-      for (const o in e[t])
-        r[`${n.length > 0 ? "--" + s : "-"}-${t.toLocaleLowerCase()}-${o}`] = e[t][o];
-    else
-      r[t] = e[t];
-  return r;
-}, d = (e) => {
-  const n = i(), r = l(n, e);
-  for (const s in r)
-    Object.prototype.hasOwnProperty.call(r, s) && document.documentElement.style.setProperty(`${s}`, r[s]);
-}, y = (e) => {
-  d(e);
-};
+function c(n) {
+  let t = 0;
+  const o = (e) => {
+    t = e, n.innerHTML = `count is ${t}`;
+  };
+  n.addEventListener("click", () => o(t + 1)), o(0);
+}
+const r = (n) => console.log(n);
 export {
-  y as setTokens
+  r as log,
+  c as setupCounter
 };
-//# sourceMappingURL=index.es.js.map
