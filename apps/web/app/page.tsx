@@ -1,15 +1,7 @@
-"use client";
-
 import { Button, Header } from "ui";
-
-import { setTokens } from "tokens";
-import { useEffect } from "react";
+import { log } from "testepkg/src";
 
 export default function Page() {
-  useEffect(() => {
-    setTokens("brn");
-  }, []);
-
   return (
     <>
       <Header text="Web" />
